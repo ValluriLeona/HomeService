@@ -1,0 +1,73 @@
+/* Make sure there's no margin/padding on body/root */
+body, #root {
+  margin: 0;
+  padding: 0;
+  height: 100%; /* Ensure the body and root take the full height of the viewport */
+}
+
+
+
+/* Optional: Add styling to control spacing for main content */
+.main-content {
+  padding: 0;
+  margin-top: 80px; /* To avoid overlap with AppBar if fixed */
+  flex-grow: 1; /* This allows the content to take the remaining space */
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0;
+  text-align: center;
+  height: 100%; /* Ensure root container is full height */
+  display: flex;
+  flex-direction: column;
+}
+
+/* Optional: Styling for the logo */
+.logo {
+  height: 6em;
+  padding: 1.5em;
+  will-change: filter;
+  transition: filter 300ms;
+}
+.logo:hover {
+  filter: drop-shadow(0 0 2em #646cffaa);
+}
+.logo.react:hover {
+  filter: drop-shadow(0 0 2em #61dafbaa);
+}
+
+/* Animation for logo spin */
+@keyframes logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* For reduced motion preference */
+@media (prefers-reduced-motion: no-preference) {
+  a:nth-of-type(2) .logo {
+    animation: logo-spin infinite 20s linear;
+  }
+}
+
+.card {
+  padding: 2em;
+}
+
+.read-the-docs {
+  color: #888;
+}
+.container {
+  width: auto;         /* Full width of the viewport */
+  height: auto;        /* Full height of the viewport */
+  padding: 0;
+  margin: 0;
+  border-radius: 0;     /* Remove rounding if you want edge-to-edge */
+  display: flex;
+  flex-direction: column;
+}
